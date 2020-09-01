@@ -23,7 +23,7 @@ method removeDups(a : seq<int>) returns (b:seq<int>)
     }
 
     while (indexb < |a|)
-    invariant 0 <= indexb - 1 < |a|;
+    invariant 0 <= indexb - 1 < |a|
     invariant(sorted(a[0..(indexb)]))
     invariant(sorted(a))
     invariant(|a| > indexb - 1 ==> sorted(a' + [a[indexb - 1]]))
