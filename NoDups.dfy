@@ -10,7 +10,7 @@ predicate nodups (a : seq<int>)
 
 method removeDups(a : seq<int>) returns (b:seq<int>)
     requires sorted(a)
-    ensures true
+    ensures nodups(b)
 {
     var indexb : int;
     var a' : seq<int>;
